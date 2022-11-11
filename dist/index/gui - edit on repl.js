@@ -44,109 +44,17 @@ function dragElement(elmnt) {
 
 }
 
-
-
-// Automation
-
-var UI = document.createElement("div");
-UI.innerHTML = `
-	<div id="Automation" class="Automation" style="z-index:100;resize: both; overflow: auto; min-height: 130px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 124px; height: 137px; background: rgb(30, 30, 30); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 413px; left: 559px;">
-    <h1 style=" font-size: 20px;"><center>Automation</center>
-    <div class="line"></div>
-    </h1>
-<style>
-.line {
-    width: 120px;;
-    height: 1px;;
-    background: repeating-linear-gradient(90deg,red 0%, yellow 7.14%, rgb(0,255,0) 14.28%, rgb(0,255,255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-   background-size:100vw 200vw; 
-    -webkit-animation:'slide' 30s infinite linear forwards;
-}@keyframes slide{
-  0%{
-    background-position-x: 0%;
-  }
-  100%{
-    background-position-x: 600vw;
-  }
-}
-.button {
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  width: 100%;
-  text-align: center;
-  color: white; 
-  background-color: rgb(30,30,30);
-
-}
-.button:hover {
-  background-color: rgb(50,50,50);
-}
-.button:active {
-  background-color: #7d8bfa;
-}
-</style>
-    <button id="gcspam" class="button">GC Spammer</button>
-    <button id="accnuke" class="button">Acc Nuker</button> 
-    <button id="spammer" class="button">Spammer</button>
-    <button id="nuker" class="button">Nuker</button>
-    <br>
-</div>`
-
-dragElement(UI.firstElementChild);
-document.body.appendChild(UI);
-
-// Exploits
-var UI = document.createElement("div");
-UI.innerHTML = `<div id="Exploits" class="Exploits" style="z-index:100;resize: both; overflow: auto;  min-height: 160px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 124px; height: 137px; background: rgb(30, 30, 30); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 413px; left: 559px;">
-    <h1 style=" font-size: 20px;"><center>Exploits</center>
-    <div class="line"></div>
-    </h1>
-    <button id="bypassnsfw" class="button">NSFW Bypass</button>
-    <button id="verifyhack" class="button">Verify Hack</button>
-    <button id="newnitro" class="button">NEW Nitro</button>
-    <button id="invistype" class="button">Invisible Typing</button>
-    <button id="specvc" class="button">Spectate VC</button>
-    <br>
-</div>`
-
-dragElement(UI.firstElementChild);
-document.body.appendChild(UI);
-
 // Misc
 var UI = document.createElement("div");
 UI.innerHTML = `
 	<div id="Misc" class="Misc" style="z-index:100;resize: both; overflow: auto;  min-height: 130px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 124px; height: 137px; background: rgb(30, 30, 30); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 413px; left: 559px;">
-    <h1 style=" font-size: 20px;"><center>Misc</center>
+    <h1 style=" font-size: 20px;"><center>DCHX</center>
     <div class="line"></div>
     </h1>
     <button id="staffmode" class="button">Staff Mode</button>
     <button id="devmode" class="button">Dev Mode</button>
     <button id="friendinvite" class="button">Friend Invite</button>
     <button id="design" class="button">Design Mode</button>
-    <br>
-</div>`
-
-dragElement(UI.firstElementChild);
-document.body.appendChild(UI);
-
-// Visual
-var UI = document.createElement("div");
-UI.innerHTML = `
-<div id="Visual" class="Visual" style="z-index:100;resize: both; overflow: auto; min-height: 100px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 137px; height: 149px; background: rgb(30, 30, 30); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 413px; left: 559px;">
-    <h1 style=" font-size: 20px;"><center>Visual</center>
-    <div class="line" style="width:135px"></div>
-    </h1>
-    <button id="userspoof" class="button">UserSpoof</button>
-    <button id="ownerspoof" class="button">OwnerSpoof</button>
-    <button id="boostspoof" class="button">Boost Spoof</button>
-    <button id="localnick" class="button">Local Nick</button>
-    <button id="allroles" class="button">All Roles</button>
-    <button id="allbadge" class="button">All Badge</button>
     <br>
 </div>`
 
