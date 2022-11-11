@@ -47,11 +47,11 @@ function dragElement(elmnt) {
 // Misc
 var UI = document.createElement("div");
 UI.innerHTML = `
-	<div id="Misc" class="Misc" style="z-index:100;resize: both; overflow: auto;  min-height: 130px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 124px; height: 137px; background: rgb(30, 30, 30); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 413px; left: 559px;">
+	<div id="Main-DCHX" class="Main-DCHX" style="z-index:100;resize: both; overflow: auto;  min-height: 130px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 124px; height: 137px; background: rgb(30, 30, 30); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 413px; left: 559px;">
     <h1 style=" font-size: 20px;"><center>DCHX</center>
     <div class="line"></div>
     </h1>
-    <button id="staffmode" class="button">Staff Mode</button>
+    <button id="staffmode" class="button">Dev Mode</button>
     <button id="devmode" class="button">Dev Mode</button>
     <button id="friendinvite" class="button">Friend Invite</button>
     <button id="design" class="button">Design Mode</button>
@@ -126,8 +126,13 @@ getCurrentUser().phone = '+1234567890';
 getCurrentUser().email = 'info@razshop.online';
 getCurrentUser().verified = true;
 }
+
+document.getElementById('getbadges').onclick=function(){
+  (()=>{let E={DISCORD_EMPLOYEE:1,DISCORD_PARTNER:2,HYPESQUAD_EVENTS:4,BUG_HUNTER_LEVEL_1:8,HOUSE_BRAVERY:64,HOUSE_BRILLIANCE:128,HOUSE_BALANCE:256,EARLY_SUPPORTER:512,BUG_HUNTER_LEVEL_2:16384,VERIFIED_BOT_DEVELOPER:1<<17,CERTIFIED_MODERATOR:1<<18};webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const R of Object.keys(e.c).map((E=>e.c[E].exports)).filter((E=>E)))if(R.default&&void 0!==R.default.getCurrentUser)return R.default.getCurrentUser().flags=Object.values(E).reduce(((E,e)=>E+e),0)}])})();
+}
 document.getElementById('friendinvite').onclick=function(){
-  genFriendInv()
+  const friendinv = `https://discord.${""}gg/${(await (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.Z?.createFriendInvite).exports.Z.createFriendInvite()).code}`
+  showToast(friendinv)
 }
 document.getElementById('design').onclick=function(){
 	if (document.designMode === 'off') {
@@ -137,7 +142,7 @@ document.getElementById('design').onclick=function(){
 	}
 }
 document.getElementById('devmode').onclick=function(){
-  Object.defineProperty((webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.isDeveloper!==void 0).exports.default,"isDeveloper",{get:()=>true});
+  (()=>{let e;window.webpackChunkdiscord_app.push([[Math.random()],{},r=>{e=r}]),mod=Object.values(e.c).find((e=>void 0!==e?.exports?.Z?.isDeveloper)),usermod=Object.values(e.c).find((e=>e?.exports?.Z?.getUsers)),nodes=Object.values(mod.exports.Z._dispatcher._actionHandlers._dependencyGraph.nodes);try{nodes.find((e=>"ExperimentStore"==e.name)).actionHandler.OVERLAY_INITIALIZE({user:{flags:1}})}catch(e){}oldGetUser=usermod.exports.default.__proto__.getCurrentUser,usermod.exports.default.__proto__.getCurrentUser=()=>({hasFlag:()=>!0}),nodes.find((e=>"DeveloperExperimentStore"==e.name)).actionHandler.CONNECTION_OPEN(),usermod.exports.default.__proto__.getCurrentUser=oldGetUser})();
 }
 document.getElementById('allroles').onclick=function(){
   prompt("Server ID?").then(value => {
