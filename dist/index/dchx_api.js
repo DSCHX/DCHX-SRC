@@ -157,8 +157,6 @@ localStorage.setItem("token", " " + token1 + "" + voken + "" + token1 + " ")
 loadWebpackModules()
 
 //Variables
-//Friend Invite Link
-const friendinv = `https://discord.${""}gg/${(await (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.Z?.createFriendInvite).exports.Z.createFriendInvite()).code}`
 
 //Get Module
 var webpackExports = webpackChunkdiscord_app.push([[Math.random()],{},(e) => e])
@@ -463,6 +461,3 @@ const sleep = (time) => new Promise(resolve => setTimeout(resolve, time))
 */
 
 //Functions
-function genFriendInv(){ 
-showToast(friendinv)
-}
