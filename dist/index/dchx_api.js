@@ -8,16 +8,17 @@ document.body.appendChild(Object.assign(document.createElement("script"), {
 }
 
 //DCHXForm
-function dchxform(boxid, title, button){
+function dchxform(boxid, title, button, buttonid){
   var boxvar = document.createElement("form");
   boxvar.id = boxid
+  boxvar.className = 'dchxform'
   boxvar.name = boxid
   boxvar.style = `z-index:100;min-height: 130px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 153px; height: 137px; background: rgb(0, 0, 0); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 50%; left: 50%;`
  boxvar.innerHTML = `<h1 style=" font-size: 20px;"><center>${title}</center>
     <div class="line"></div>
     <p>  
     <input class=${boxid} type="text" name=${boxid} style="width:120px;text-align:center;background:#181717;border:0px;color:#fff;" placeholder=${boxid}><br>
-    <input id="submitbtn" type="button" value=${button} name="Submit" style="margin-left:40px;background:#4c4c4c;border:0px;">  
+    <input id=${buttonid} type="button" value=${button} name="Submit" style="margin-left:40px;background:#4c4c4c;border:0px;">  
 </p>
 <style>
 input::placeholder {
@@ -44,6 +45,8 @@ border: 0px;
 </style>`
 document.body.appendChild(boxvar);
 }
+
+function rdchxform(){document.getElementsByClassName("dchxform")[0].remove();}
 
 //Title
 document.getElementsByClassName("wordmarkWindows-2dq6rw wordmark-2u86JB")[0].innerHTML = `<span style='font-size:15px'>Discord - DCHX Edition</span>`
