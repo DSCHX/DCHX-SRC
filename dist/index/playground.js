@@ -1,9 +1,9 @@
-function dchxform(id, reason){
+function dchxform(id, title){
   var serveridbox = document.createElement("form");
   serveridbox.id = "serveridbox"
-  serveridbox.name = "myform"
+  serveridbox.name = id
   serveridbox.style = `z-index:100;min-height: 130px; transform: translateX(0px) translateY(-32px); opacity: 0.85; font-family: sans-serif; width: 153px; height: 137px; background: rgb(0, 0, 0); position: absolute; border-radius: 5px; display: grid; place-items: center; color: white; font-size: larger; top: 50%; left: 50%;`
-  serveridbox.innerHTML = `<h1 style=" font-size: 20px;"><center>Owner Spoof</center>
+  serveridbox.innerHTML = `<h1 style=" font-size: 20px;"><center>${title}</center>
     <div class="line"></div>
     <p>  
     <input class="serveridDCHX" type="text" name="serverid" style="width:120px;text-align:center;background:#181717;border:0px;color:#fff;" placeholder="ServerId"><br>
