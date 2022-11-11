@@ -1,3 +1,12 @@
+//require('url')
+function require(url) {
+document.body.appendChild(Object.assign(document.createElement("script"), {
+    src: url,
+    nonce: document.querySelector("[nonce]").nonce,
+    onerror: console.error
+  }))
+}
+
 //Title
 document.getElementsByClassName("wordmarkWindows-2dq6rw wordmark-2u86JB")[0].innerHTML = `<span style='font-size:15px'>Discord - DCHX Edition</span>`
 
