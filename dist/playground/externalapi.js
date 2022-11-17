@@ -1,5 +1,4 @@
-{
-  var delay = ms => new Promise(res => setTimeout(res, ms))
+var delay = ms => new Promise(res => setTimeout(res, ms))
   // prettier-ignore
   var qs = obj => Object.entries(obj).map(([k, v]) => `${k}=${v}`).join('&')
 
@@ -147,5 +146,3 @@
     }
   }
   id(false)
-  
-}
