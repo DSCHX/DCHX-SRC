@@ -16,7 +16,6 @@
   }
 
   const apiCall = (apiPath, body, method = 'GET', options = {}) => {
-    if (!authHeader) throw new Error("The authorization token is missing. Did you forget to set it? `authHeader = 'your_token'`")
     const fetchOptions = {
       body: body ? body : undefined,
       method,
