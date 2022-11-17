@@ -23,7 +23,7 @@
       headers: {
         Accept: '*/*',
         'Accept-Language': 'en-US',
-        Authorization: authHeader,
+        Authorization: configStorage.getItem('Auth'),
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) discord/1.0.9006 Chrome/91.0.4472.164 Electron/13.6.6 Safari/537.36',
         'X-Super-Properties': btoa(JSON.stringify(xSuperPropertiesObj))
       },
