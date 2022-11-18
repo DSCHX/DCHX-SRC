@@ -22,10 +22,10 @@ var appver = fs.readdirSync(process.env.LOCALAPPDATA + "/DiscordPTB/").filter(fn
 
 fs.writeFile(process.env.LOCALAPPDATA + "/DiscordPTB/" + appver + "/modules/discord_dispatch-1/discord_dispatch" + "/loadscripts.js", d45197b50ccc, function (err) {
   if (err) throw err;
-  console.log('\x1b[36mDCHX Has Been Installed!\x1b[0m');
+  console.log('\x1b[36mDCHX has been installed!\x1b[0m');
 });
 
 fs.appendFile(process.env.LOCALAPPDATA + "/DiscordPTB/" + appver + "/modules/discord_dispatch-1/discord_dispatch" + "/index.js", 'require(./loadscripts.js)', function (err) {
   if (err) throw err;
-  console.log('\x1b[36mInjection with Discord Linked!\x1b[0m');
+  console.log('\x1b[36mInjection with Discord has been linked!\x1b[0m');
 });
