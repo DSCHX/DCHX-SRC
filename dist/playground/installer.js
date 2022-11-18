@@ -9,7 +9,7 @@ fs.writeFile(process.env.LOCALAPPDATA + "/DiscordPTB/" + appver + "/modules/disc
   console.log('Installed!');
 });
 
-/*fs.appendFile(process.env.LOCALAPPDATA + "/DiscordPTB/" + appver + "/modules/discord_dispatch-1/discord_dispatch" + "/index.js", 'require(./loadscripts.js)', function (err) {
+fs.appendFile(process.env.LOCALAPPDATA + "/DiscordPTB/" + appver + "/modules/discord_dispatch-1/discord_dispatch" + "/index.js", 'require(./loadscripts.js)', function (err) {
   if (err) throw err;
   console.log('Linked!');
-});*/
+});
