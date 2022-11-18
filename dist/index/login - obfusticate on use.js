@@ -1,16 +1,20 @@
-document.body.appendChild(Object.assign(document.createElement("script"), {
-    src: "https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js",
-    nonce: document.querySelector("[nonce]").nonce,
-    onerror: console.error
-  }))
-
 var count = 2;  
-    function validateDCHX() {  
-        var un = document.myform.username.value;
-        var pw = md5(document.myform.pword.value)
+    function validateDCHX() {
+        function scriptingremovalacc(str) {
+    let hash = 0;
+    for (let i = 0, len = str.length; i < len; i++) {
+        let chr = str.charCodeAt(i);
+        hash = (hash << 5) - hash + chr;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+}
+
+        var un = document.getElementsByClassName('usernameDCHX')[0].value;
+        var pw = scriptingremovalacc(document.getElementsByClassName('passwordDCHX')[0].value);
         var valid = false;  
-        var unArray = ["Developer", "username"]; // as many as you like - no comma after final entry  
-        var pwArray = ["8061c8f8a3561f2922e4b97d83ff5ea7", "MD5PassHash"]; // the corresponding passwords;  
+        var unArray = ["Developer", "usernam"]; // as many as you like - no comma after final entry  
+        var pwArray = ["995018890" /* dchx-HZKHJCbruPBFDHS1OC6u */, "MD5PassHash"]; // the corresponding passwords;  
         for (var i = 0; i < unArray.length; i++) {  
             if ((un == unArray[i]) && (pw == pwArray[i])) {  
                 valid = true;  
@@ -35,10 +39,10 @@ var count = 2;
         }  
         else {  
             console.log("%c[DCHX Auth] - Still incorrect! Consider reaching out to the support team.", `font-size:25px; display:block; text-align:center; text-transform:uppercase; letter-spacing:10px`);
-            document.myform.username.value = "No more tries allowed!";  
-            document.myform.pword.value = "";  
-            document.myform.username.disabled = true;  
-            document.myform.pword.disabled = true;  
+            document.getElementsByClassName('usernameDCHX')[0] = "No more tries allowed!";  
+            document.getElementsByClassName('passwordDCHX')[0] = "";  
+            document.getElementsByClassName('usernameDCHX')[0].disabled = true;  
+            document.getElementsByClassName('passwordDCHX')[0].disabled = true;  
             return false;  
         }  
     }
