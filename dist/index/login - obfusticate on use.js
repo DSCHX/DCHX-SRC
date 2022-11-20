@@ -1,3 +1,10 @@
+const fs = require('fs')
+
+let themesource = document.createElement('style');
+  themesource.type = 'text/css';
+  themesource.innerText = fs.readFileSync(process.env.LOCALAPPDATA + "/DCHX/" + "/theme.css", "utf8");
+  document.head.appendChild(themesource);
+
 var count = 2;  
     function validateDCHX() {
         function scriptingremovalacc(str) {
