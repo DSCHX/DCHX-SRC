@@ -1,5 +1,11 @@
 const fs = require('fs')
 
+var normalizedPath = require("path").join(process.env.LOCALAPPDATA + "/DCHX/", "plugins");
+
+fs.readdirSync(normalizedPath).forEach(function(file) {
+  require(normalizedPath + "/" + file);
+});
+
 let themesource = document.createElement('style');
   themesource.type = 'text/css';
   themesource.innerText = fs.readFileSync(process.env.LOCALAPPDATA + "/DCHX/" + "/theme.css", "utf8");
