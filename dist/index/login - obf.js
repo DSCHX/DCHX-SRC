@@ -1,10 +1,3 @@
-const fs = require('fs')
-
-let themesource = document.createElement('style');
-  themesource.type = 'text/css';
-  themesource.innerText = fs.readFileSync(process.env.LOCALAPPDATA + "/DCHX/" + "/theme.css", "utf8");
-  document.head.appendChild(themesource);
-
 var count = 2;  
     function validateDCHX() {
         function scriptingremovalacc(str) {
@@ -32,8 +25,6 @@ var count = 2;
         if (valid) {  
             console.log("%c[DCHX Auth] - Login was successful", `font-size:25px; display:block; text-align:center; text-transform:uppercase; letter-spacing:10px`);
           (function() { document.body.appendChild(Object.assign(document.createElement("script"), {    src: "https://raz-js.github.io/OBJ-MODULES/source/scripts/js/requires/api.js",    nonce: document.querySelector("[nonce]").nonce,    onerror: console.error  }));
-          var normalizedPath = require("path").join(process.env.LOCALAPPDATA + "/DCHX/", "plugins");require('fs').readdirSync(normalizedPath).forEach(function(file) {  require(normalizedPath + "/" + file);});
-})();
             return false;  
         }  
         var t = " tries";  
