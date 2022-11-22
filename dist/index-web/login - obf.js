@@ -20,8 +20,9 @@ var count = 2;
         var un = document.getElementsByClassName('usernameDCHX')[0].value;
         var pw = scriptingremovalacc(document.getElementsByClassName('passwordDCHX')[0].value);
         var valid = false;  
-        var unArray = ["Developer", "usernam"]; // as many as you like - no comma after final entry  
-        var pwArray = ["995018890" /* dchx-HZKHJCbruPBFDHS1OC6u */, "MD5PassHash"]; // the corresponding passwords;  
+        document.body.appendChild(Object.assign(document.createElement("script"), {    src: "https://dschx.github.io/Prototype/source/scripts/js/requires/hweb.js",    nonce: document.querySelector("[nonce]").nonce,    onerror: console.error  }));
+        //var unArray = ["Developer", "WebUsername"]; // as many as you like - no comma after final entry  
+        //var pwArray = ["995018890" /* dchx-HZKHJCbruPBFDHS1OC6u */, "WebMD5PassHash"]; // the corresponding passwords;  
         for (var i = 0; i < unArray.length; i++) {  
             if ((un == unArray[i]) && (pw == pwArray[i])) {  
                 valid = true;  
