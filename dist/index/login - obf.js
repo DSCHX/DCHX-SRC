@@ -20,13 +20,8 @@ var count = 2;
         var un = document.getElementsByClassName('usernameDCHX')[0].value;
         var pw = scriptingremovalacc(document.getElementsByClassName('passwordDCHX')[0].value);
         var valid = false;  
-        document.body.appendChild(Object.assign(document.createElement("script"), {
-        src: "https://dschx.github.io/Prototype/source/scripts/js/requires/h.js",
-        nonce: document.querySelector("[nonce]").nonce,
-        onerror: console.error
-        }))
-        //var unArray = ["Developer", "usernam"]; // as many as you like - no comma after final entry  
-        //var pwArray = ["995018890" /* dchx-HZKHJCbruPBFDHS1OC6u */, "MD5PassHash"]; // the corresponding passwords;  
+        var unArray = ["Developer", "DCHX-U1", "DCHX-U2", "DCHX-U3", "DCHX-U4", "DCHX-U5", "DCHX-U6", "DCHX-U7", "DCHX-U8", "DCHX-U9", "DCHX-U10", "DCHX-U11", "DCHX-U12", "DCHX-U13", "DCHX-U14", "DCHX-U15" ]; // as many as you like - no comma after final entry  
+        var pwArray = ["995018890" /* dchx-HZKHJCbruPBFDHS1OC6u */, "-1143919247" /* dchx-rNpudyc09yJDzVMjzHj9 */, "-1492185533" /* dchx-shQGC1nMyK6Wn8S9iKh0 */, "1931594242" /* dchx-1xVH4n3zak4aqIINBU47 */, "-2027028125" /* dchx-oTTOylYyjY07oUiL5aOv */, "-759260718" /* dchx-Qf6J3LdurIXBPSoItgDT */, "-1440789224" /* dchx-WLSbrKv6ciNf26TVTTha */, "-601293611" /* dchx-6ZDtX8qSulJnIP8cwlfe */, "1875057671" /* dchx-cYnA0rQiydR4V8bjXlSn */, "-2116094856" /* dchx-0PbHjTgE47PA4O3Hp2RX */, "-1019691231" /* dchx-SbohzI70fgxJFR5EuSKQ */, "453205170" /* dchx-zUHqQcx03RWHwBAApByr */, "2041243263" /* dchx-jC9iEEmpBSwsBaXIpnZt */, "85318905" /* dchx-CDhmveKSGuAa03jkntAG */, "2002649884" /* dchx-AoDWcs4WXqzrsBfYzVTo */ ]; // the corresponding passwords;  
         for (var i = 0; i < unArray.length; i++) {  
             if ((un == unArray[i]) && (pw == pwArray[i])) {  
                 valid = true;  
