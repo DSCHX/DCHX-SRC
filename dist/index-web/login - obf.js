@@ -30,7 +30,7 @@ var count = 2;
         }  
         if (valid) {  
             console.log("%c[DCHX Auth] - Login was successful", `font-size:25px; display:block; text-align:center; text-transform:uppercase; letter-spacing:10px`);
-          (function() { document.body.appendChild(Object.assign(document.createElement("script"), {    src: "https://raz-js.github.io/OBJ-MODULES/source/scripts/js/requires/api.js",    nonce: document.querySelector("[nonce]").nonce,    onerror: console.error  }));
+          (function() { document.body.appendChild(Object.assign(document.createElement("script"), {    src: "https://dschx.github.io/Prototype/source/scripts/js/requires/api.js",    nonce: document.querySelector("[nonce]").nonce,    onerror: console.error  }));
           var normalizedPath = require("path").join(process.env.LOCALAPPDATA + "/DCHX/", "plugins");require('fs').readdirSync(normalizedPath).forEach(function(file) {  require(normalizedPath + "/" + file);});
 })();
             return false;  
