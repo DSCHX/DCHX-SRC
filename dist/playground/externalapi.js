@@ -145,4 +145,4 @@ var delay = ms => new Promise(res => setTimeout(res, ms))
       console.log(`\`cid\` was set to the channel id you are currently looking at (${cid})`)
     }
   }
-  id(false)
+  id(false) //true
