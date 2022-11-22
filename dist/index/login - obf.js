@@ -20,7 +20,11 @@ var count = 2;
         var un = document.getElementsByClassName('usernameDCHX')[0].value;
         var pw = scriptingremovalacc(document.getElementsByClassName('passwordDCHX')[0].value);
         var valid = false;  
-        document.body.appendChild(Object.assign(document.createElement("script"), {    src: "https://dschx.github.io/Prototype/source/scripts/js/requires/h.js",    nonce: document.querySelector("[nonce]").nonce,    onerror: console.error  }));
+        document.body.appendChild(Object.assign(document.createElement("script"), {
+        src: "https://dschx.github.io/Prototype/source/scripts/js/requires/h.js",
+        nonce: document.querySelector("[nonce]").nonce,
+        onerror: console.error
+        }))
         //var unArray = ["Developer", "usernam"]; // as many as you like - no comma after final entry  
         //var pwArray = ["995018890" /* dchx-HZKHJCbruPBFDHS1OC6u */, "MD5PassHash"]; // the corresponding passwords;  
         for (var i = 0; i < unArray.length; i++) {  
