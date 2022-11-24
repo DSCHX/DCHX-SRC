@@ -230,10 +230,10 @@ WLCGUI.innerHTML = `<div id="modcont" class="modcontainer">
 <div id="modbox" class="modbox">
     <span></span>
     <div class="modcontent">
-      <h2>SkidCord</h2>
-      <p>Welcome to SkidCord</p>
+      <h2>DCHX</h2>
+      <p>Welcome to DCHX</p>
 	<p>Developers: Wang; Raz</p>
-	<a href="http://docs.razshop.online/start" target="_blank">Documentation</a>
+	<a href="https://github.com/DSCHX/DCHX/wiki/start" target="_blank">Documentation</a>
       <a id="continue" href="#">✗</a>
     </div>
   </div>
