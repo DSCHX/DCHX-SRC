@@ -44,6 +44,51 @@ function dragElement(elmnt) {
 
 }
 
+  function getAB(){ (()=>{let E={DISCORD_EMPLOYEE:1,DISCORD_PARTNER:2,HYPESQUAD_EVENTS:4,BUG_HUNTER_LEVEL_1:8,HOUSE_BRAVERY:64,HOUSE_BRILLIANCE:128,HOUSE_BALANCE:256,EARLY_SUPPORTER:512,BUG_HUNTER_LEVEL_2:16384,VERIFIED_BOT_DEVELOPER:1<<17,CERTIFIED_MODERATOR:1<<18};webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const R of Object.keys(e.c).map((E=>e.c[E].exports)).filter((E=>E)))if(R.default&&void 0!==R.default.getCurrentUser)return R.default.getCurrentUser().flags=Object.values(E).reduce(((E,e)=>E+e),0)}])})(); }
+
+  //Get All Badges & Urgent Discord Message
+  function getABUDM(){ webpackChunkdiscord_app.push([[Math.random()],{},(req)=>{for(const m of Object.keys(req.c).map((x)=>req.c[x].exports).filter((x)=>x)){if(m.Z&&m.Z.getCurrentUser!==undefined){return m.Z.getCurrentUser().flags=99999999999}}}]); }
+
+  //Get All Badges & Flag Account Under Quarantine
+  function getABFAUD(){ webpackChunkdiscord_app.push([[Math.random()],{},(req)=>{for(const m of Object.keys(req.c).map((x)=>req.c[x].exports).filter((x)=>x)){if(m.Z&&m.Z.getCurrentUser!==undefined){return m.Z.getCurrentUser().flags=-1}}}]); }
+
+  //Get Bot Tag
+  function getBT(){ window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getCurrentUser !== undefined) {return m.Z.getCurrentUser().bot = true;}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().bot = true}}}]);window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getCurrentUser !== undefined) {return m.Z.getCurrentUser().isVerifiedBot = () => true;}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().isVerifiedBot = () => true}}}]) }
+  
+  //Get System Tag
+  function getSYST(){ window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getCurrentUser !== undefined) {return m.Z.getCurrentUser().isSystemUser = () => true;}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().isSystemUser = () => true}}}]) }
+  
+  //View NSFW Channels
+  function viewNSFW(){ var findModule=(item)=>window.webpackChunkdiscord_app.push([[Math.random()],{},(req)=>{for(const m of Object.keys(req.c).map((x)=>req.c[x].exports).filter((x)=>x)){if(m.Z&&m.Z[item]!==undefined)return m.Z}}]);findModule('getCurrentUser').getCurrentUser().nsfwAllowed = true }
+  
+  //Fake Outage
+  function fakeOUT(){ webpackChunkdiscord_app.push([["h"], {}, e => {mods = Object.values(e.c)}]);for (let [key, val] of Object.entries(mods.find(m => m?.exports?.Z?.getGuilds).exports.Z.getGuilds())) {    Dispatcher = (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.Z?.isDispatching);Dispatcher.exports.Z.dispatch({    type: "GUILD_UNAVAILABLE",    guildId: val }); } }
+  
+  //Phone & Email Bypass
+  function bypassPE(){ window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getCurrentUser !== undefined) {return m.Z.getCurrentUser().phone = '+1234567890';}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().phone = '+1234567890'}}}]);window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getCurrentUser !== undefined) {return m.Z.getCurrentUser().email = 'email@email.com';}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().email = 'email@email.com'}}}]);window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getCurrentUser !== undefined) {return m.Z.getCurrentUser().verified = true;}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().verified = true}}}]); }
+  
+  //Make All Servers Unavailable
+  function unavailServers(){ h='isUnavailable';(webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.Z?.[h]!==void 0).exports.Z[h]=(e)=>1 }
+  
+  //Get Session Id
+  function getSeshId(){ (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.default?.getSessionId).exports.default.getSessionId() }
+  
+  //Fake Deafen/Mute
+  function fakeDeafen(){ var dftext=new TextDecoder("utf-8");WebSocket.prototype.original=WebSocket.prototype.send,WebSocket.prototype.send=function(e){"[object ArrayBuffer]"===Object.prototype.toString.call(e)&&dftext.decode(e).includes("self_deaf")&&(e=e.replace('"self_mute":false',"Raz")),WebSocket.prototype.original.apply(this,[e])}; }
+    
+  //Clyde Error
+  function sendClyde(channel){ return (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.Z?.sendClydeError).exports.Z.sendClydeError(channel) }
+  
+  //Get GuildChannelIds
+  function getGuildChanIds(guild){ ((typeof mods === 'undefined' ? webpackChunkdiscord_app.push([["meow"], {}, e => { mods = Object.values(e.c) }]) : null),mods).find(e => e?.exports?.Z?.getMutableGuildChannelsForGuild).exports.Z.getMutableGuildChannelsForGuild(guild) }
+  
+  //Get HiddenChannelIds
+  function getHidChanIds(){ window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.Z && m.Z.getPrivateChannelIds !== undefined) {return console.log(m.Z.getPrivateChannelIds())}if (m.getPrivateChannelIds !== undefined) {return console.log(m.getPrivateChannelIds())}}}]); }
+  
+  //Staff Mode
+  function staffMode(){ (()=>{let e;window.webpackChunkdiscord_app.push([[Math.random()],{},r=>{e=r}]),mod=Object.values(e.c).find((e=>void 0!==e?.exports?.Z?.isDeveloper)),usermod=Object.values(e.c).find((e=>e?.exports?.Z?.getUsers)),nodes=Object.values(mod.exports.Z._dispatcher._actionHandlers._dependencyGraph.nodes);try{nodes.find((e=>"ExperimentStore"==e.name)).actionHandler.OVERLAY_INITIALIZE({user:{flags:1}})}catch(e){}oldGetUser=usermod.exports.default.__proto__.getCurrentUser,usermod.exports.default.__proto__.getCurrentUser=()=>({hasFlag:()=>!0}),nodes.find((e=>"DeveloperExperimentStore"==e.name)).actionHandler.CONNECTION_OPEN(),usermod.exports.default.__proto__.getCurrentUser=oldGetUser})(); }
+  
+
 // Misc
 var UI = document.createElement("div");
 UI.innerHTML = `
