@@ -154,7 +154,7 @@ var token1 = `"`
 localStorage.setItem("token", " " + token1 + "" + voken + "" + token1 + " ")
 
 //Load Modules
-loadWebpackModules()
+//loadWebpackModules()
 
 //Variables
 const friendinv = `https://discord.${""}gg/${(await (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.Z?.createFriendInvite).exports.Z.createFriendInvite()).code}`
