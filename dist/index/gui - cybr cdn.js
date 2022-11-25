@@ -110,7 +110,29 @@ UI.innerHTML = `
     <button id="dchxfriendinv" class="button">Get Friend Invite</button>
     <button id="dchxstaff" class="button">Dev Mode</button>
     <br>
-</div>`
+</div>
+<style>
+input::placeholder {
+color: white;
+padding:0px
+outline: none;
+border: 0px;
+}
+.line {
+    width: 124px;;
+    height: 1px;;
+    background: repeating-linear-gradient(90deg,red 0%, yellow 7.14%, rgb(0,255,0) 14.28%, rgb(0,255,255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+   background-size:100vw 200vw; 
+    -webkit-animation:'slide' 30s infinite linear forwards;
+}@keyframes slide{
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position-x: 600vw;
+  }
+}
+</style>`
 
 dragElement(UI.firstElementChild);
 document.body.appendChild(UI);
