@@ -51,17 +51,26 @@ UI.innerHTML = `
     <h1 style=" font-size: 20px;"><center>DCHX</center>
     <div class="line"></div>
     </h1>
-    <button id="staffmode" class="button">Dev Mode</button>
-    <button id="devmode" class="button">Dev Mode</button>
-    <button id="friendinvite" class="button">Friend Invite</button>
-    <button id="design" class="button">Design Mode</button>
+    <button id="dchxab" class="button">Get All Badges</button>
+    <button id="dchxabdum" class="button">Get All Badges & A Urgent Msg From DSC</button>
+    <button id="dchxabfaud" class="button">Get All Badges & Quarantine</button>
+    <button id="dchxbt" class="button">Bot Tag</button>
+    <button id="dchxsyst" class="button">System Tag</button>
+    <button id="dchxnsfw" class="button">NSFW Bypass</button>
+    <button id="dchxoutage" class="button">Fake Api Outage</button>
+    <button id="dchxpe" class="button">Verification Bypass</button>
+    <button id="dchxunserv" class="button">Make Servers Unavailable</button>
+    <button id="dchxdeafen" class="button">Fake Deafen</button>
+    <button id="dchxdesign" class="button">Design Mode</button>
+    <button id="dchxfriendinv" class="button">Get Friend Invite</button>
+    <button id="dchxstaff" class="button">Dev Mode</button>
     <br>
 </div>`
 
 dragElement(UI.firstElementChild);
 document.body.appendChild(UI);
 
-function ownerspoofdia(){
+/* function ownerspoofdia(){
   var serveridbox = document.createElement("form");
   serveridbox.id = "serveridbox"
   serveridbox.name = "myform"
@@ -120,29 +129,53 @@ document.getElementById('userspoof').onclick=function(){
 };
 document.getElementById('ownerspoof').onclick=function(){
   ownerspoofdia()
-}
-document.getElementById('verifyhack').onclick=function(){
+} */
+document.getElementById('dchxpe').onclick=function(){
 getCurrentUser().phone = '+1234567890';
 getCurrentUser().email = 'info@razshop.online';
 getCurrentUser().verified = true;
 }
 
-document.getElementById('getbadges').onclick=function(){
-  (()=>{let E={DISCORD_EMPLOYEE:1,DISCORD_PARTNER:2,HYPESQUAD_EVENTS:4,BUG_HUNTER_LEVEL_1:8,HOUSE_BRAVERY:64,HOUSE_BRILLIANCE:128,HOUSE_BALANCE:256,EARLY_SUPPORTER:512,BUG_HUNTER_LEVEL_2:16384,VERIFIED_BOT_DEVELOPER:1<<17,CERTIFIED_MODERATOR:1<<18};webpackChunkdiscord_app.push([[Math.random()],{},e=>{for(const R of Object.keys(e.c).map((E=>e.c[E].exports)).filter((E=>E)))if(R.default&&void 0!==R.default.getCurrentUser)return R.default.getCurrentUser().flags=Object.values(E).reduce(((E,e)=>E+e),0)}])})();
+document.getElementById('dchxab').onclick=function(){
+  getAB();
 }
-document.getElementById('friendinvite').onclick=function(){
+document.getElementById('dchxabdum').onclick=function(){
+  getABDUM();
+}
+document.getElementById('dchxabfaud').onclick=function(){
+  getABFAUD();
+}
+document.getElementById('dchxbt').onclick=function(){
+  getBT();
+}
+document.getElementById('dchxsyst').onclick=function(){
+  getSYST();
+}
+document.getElementById('dchxnsfw').onclick=function(){
+  viewNSFW();
+}
+document.getElementById('dchxoutage').onclick=function(){
+  fakeOUT();
+}
+document.getElementById('dchxunserv').onclick=function(){
+  unavailServers();
+}
+document.getElementById('dchxdeafen').onclick=function(){
+  fakeDeafen();
+}
+document.getElementById('dchxfriendinv').onclick=function(){
   const friendinv = `https://discord.${""}gg/${(await (webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m => m?.exports?.Z?.createFriendInvite).exports.Z.createFriendInvite()).code}`
   showToast(friendinv)
 }
-document.getElementById('design').onclick=function(){
+document.getElementById('dchxdesign').onclick=function(){
 	if (document.designMode === 'off') {
 		document.designMode = 'on'
 	} else {
 		document.designMode = 'off'
 	}
 }
-document.getElementById('devmode').onclick=function(){
-  (()=>{let e;window.webpackChunkdiscord_app.push([[Math.random()],{},r=>{e=r}]),mod=Object.values(e.c).find((e=>void 0!==e?.exports?.Z?.isDeveloper)),usermod=Object.values(e.c).find((e=>e?.exports?.Z?.getUsers)),nodes=Object.values(mod.exports.Z._dispatcher._actionHandlers._dependencyGraph.nodes);try{nodes.find((e=>"ExperimentStore"==e.name)).actionHandler.OVERLAY_INITIALIZE({user:{flags:1}})}catch(e){}oldGetUser=usermod.exports.default.__proto__.getCurrentUser,usermod.exports.default.__proto__.getCurrentUser=()=>({hasFlag:()=>!0}),nodes.find((e=>"DeveloperExperimentStore"==e.name)).actionHandler.CONNECTION_OPEN(),usermod.exports.default.__proto__.getCurrentUser=oldGetUser})();
+document.getElementById('dchxstaff').onclick=function(){
+  staffMode();
 }
 document.getElementById('allroles').onclick=function(){
   prompt("Server ID?").then(value => {
