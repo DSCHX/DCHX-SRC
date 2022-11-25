@@ -185,7 +185,7 @@ document.getElementById('dchxab').onclick=function(){
   getAB();
 }
 document.getElementById('dchxabdum').onclick=function(){
-  getABDUM();
+  getABUDM();
 }
 document.getElementById('dchxabfaud').onclick=function(){
   getABFAUD();
